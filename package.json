@@ -27,7 +27,16 @@
     "format:fix": "prettier --write .",
     "install:backend": "cd packages/backend && pnpm install",
     "install:frontend": "cd packages/frontend && pnpm install",
-    "install:all": "pnpm install && pnpm run install:backend && pnpm run install:frontend"
+    "install:all": "pnpm install && pnpm install:backend && pnpm install:frontend",
+    "build:backend": "cd packages/backend && pnpm build",
+    "build:frontend": "cd packages/frontend && pnpm build",
+    "build": "concurrently pnpm:build:*",
+    "start:backend": "cd packages/backend && pnpm start",
+    "start:frontend": "cd packages/frontend && pnpm start",
+    "start": "concurrently pnpm:start:*",
+    "dev:backend": "cd packages/backend && pnpm run dev",
+    "dev:frontend": "cd packages/frontend && pnpm run dev",
+    "dev": "concurrently pnpm:dev:*"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,html,css,json}": [
