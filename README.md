@@ -33,7 +33,7 @@ pnpm run dev
 5. or, start the production server
 
 ```bash
-pnpm run prod
+pnpm run start
 ```
 
 ### license
