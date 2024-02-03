@@ -28,5 +28,10 @@
     "install:backend": "cd packages/backend && pnpm install",
     "install:frontend": "cd packages/frontend && pnpm install",
     "install:all": "pnpm install && pnpm run install:backend && pnpm run install:frontend"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,html,css,json}": [
+      "pnpm run format:fix && pnpm run lint"
+    ]
   }
 }
