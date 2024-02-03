@@ -31,4 +31,9 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
   },
+  settings: {
+    react: {
+      version: '18.0.0',
+    },
+  },
 };
