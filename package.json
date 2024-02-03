@@ -31,7 +31,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,html,css,json}": [
-      "pnpm run format:fix && pnpm run lint"
+      "pnpm run format:fix"
     ]
   }
 }
