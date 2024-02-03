@@ -21,7 +21,7 @@ cd sourtimes
 3. install dependencies
 
 ```bash
-pnpm run install # this will install both monorepo, backend, and frontend dependencies
+pnpm run install:all # this will install both monorepo, backend, and frontend dependencies
 ```
 
 4. start the development server
