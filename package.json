@@ -23,6 +23,6 @@
     "format:fix": "prettier --write .",
     "install:backend": "cd packages/backend && pnpm install",
     "install:frontend": "cd packages/frontend && pnpm install",
-    "install": "pnpm install && pnpm run install:backend && pnpm run install:frontend"
+    "install:all": "pnpm install && pnpm run install:backend && pnpm run install:frontend"
   }
 }
