@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "concurrently": "^8.2.2",
     "typescript": "^5.3.3"
   },
