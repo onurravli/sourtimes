@@ -1,4 +1,5 @@
 import type { Request, Response } from 'express';
+import { hashPassword } from '../utils';
 import { mongodb } from '../services/mongodb.service';
 
 class AuthorController {
@@ -13,6 +14,28 @@ class AuthorController {
       }
       return res.status(404).json({
         error: "Author doesn't exist.",
+      });
+    } catch (error) {
+      return res.status(500).json({
+        error: 'An error occurred.',
+        detail: error,
+      });
+    }
+  }
+  public async post(req: Request, res: Response) {
+    try {
+      const { nickname, email, password } = req.body;
+      const hashedPassword = await hashPassword(password);
+      const inserted = await mongodb.collections.authors?.insertOne({
+        nickname: nickname,
+        email: email,
+        password: hashedPassword,
+        entries: [],
+        isVerified: false,
+      });
+      return res.status(201).json({
+        message: 'Author created successfully.',
+        id: inserted?.insertedId,
       });
     } catch (error) {
       return res.status(500).json({
