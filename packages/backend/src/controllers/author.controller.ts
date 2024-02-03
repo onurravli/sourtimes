@@ -26,7 +26,7 @@ class AuthorController {
     try {
       const { nickname, email, password } = req.body;
       const hashedPassword = await hashPassword(password);
-      const inserted = await mongodb.collections.authors?.insertOne({
+      await mongodb.collections.authors?.insertOne({
         nickname: nickname,
         email: email,
         password: hashedPassword,
@@ -35,7 +35,6 @@ class AuthorController {
       });
       return res.status(201).json({
         message: 'Author created successfully.',
-        id: inserted?.insertedId,
       });
     } catch (error) {
       return res.status(500).json({
