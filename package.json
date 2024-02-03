@@ -1,0 +1,11 @@
+{
+  "name": "sourtimes",
+  "description": "a modern clone of the popular turkish website eksisozluk.com.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:onurravli/sourtimes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/onurravli/sourtimes/issues"
+  }
+}
