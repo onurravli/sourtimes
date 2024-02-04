@@ -2,6 +2,18 @@
 
 a modern clone of the popular turkish website eksisozluk.com.
 
+### what is this?
+
+as i mention [here](#sourtimes), it is a modern clone of eksisozluk.com written with more modern technologies, for a more modern world.
+
+### why? what is your motivation?
+
+nothing but curiosity and i just wanted to do.
+
+### tech stack
+
+i am using express.js as web framework, mongodb as database. and i will use react.js as frontend library.
+
 ### get started
 
 there are some steps to do before start development.
