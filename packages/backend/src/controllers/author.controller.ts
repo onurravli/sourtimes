@@ -48,6 +48,7 @@ class AuthorController {
         password: hashedPassword,
         entries: [],
         isVerified: false,
+        isNoob: true,
       });
       return res.status(201).json({
         message: 'Author created successfully.',
