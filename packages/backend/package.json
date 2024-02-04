@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.5",
     "concurrently": "^8.2.2",
     "typescript": "^5.3.3"
   },
