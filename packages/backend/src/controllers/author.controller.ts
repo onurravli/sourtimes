@@ -59,6 +59,27 @@ class AuthorController {
       });
     }
   }
+  public async delete(req: Request, res: Response) {
+    try {
+      const { username } = req.params;
+      const deleted = await mongodb.collections.authors?.deleteOne({
+        username: username,
+      });
+      if (deleted?.deletedCount == 1) {
+        return res.status(200).json({
+          message: 'Author deleted successfully.',
+        });
+      }
+      return res.status(404).json({
+        error: "Author doesn't exist.",
+      });
+    } catch (error) {
+      return res.status(500).json({
+        error: 'An error occurred.',
+        detail: error,
+      });
+    }
+  }
 }
 
 export { AuthorController };
